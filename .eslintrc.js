@@ -12,7 +12,35 @@ module.exports = {
     ecmaVersion: 2020,
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-  },
+    // indent: [
+    //     2,
+    //     4,
+    //     {
+    //         SwitchCase: 1
+    //     }
+    // ],
+    // 'comma-style': ['error', 'first', {
+    //     exceptions: {
+    //         ArrayExpression: true,
+    //         ObjectExpression: true
+    //     }
+    // }],
+    // semi: [
+    //     2,
+    //     'never'
+    // ],
+    // 'no-floating-decimal': [
+    //     2
+    // ],
+    '@typescript-eslint/no-explicit-any':'off',
+    'no-param-reassign':'off',
+    'no-multi-assign':'off',
+    'max-len':'off',
+    '@typescript-eslint/camelcase':'off',
+    'no-underscore-dangle':'off',
+    '@typescript-eslint/no-var-requires':'off',
+    'func-names':'off',
+    'no-console': 'off',
+    'no-debugger': 'off'
+},
 };
