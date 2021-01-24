@@ -40,6 +40,7 @@ module.exports = {
     'no-underscore-dangle':'off',
     '@typescript-eslint/no-var-requires':'off',
     'func-names':'off',
+    'linebreak-style':'off',
     'no-console': 'off',
     'no-debugger': 'off'
 },

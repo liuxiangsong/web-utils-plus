@@ -30,20 +30,18 @@ function handleInput(el: any, binding: any, reg: any, max: number) {
  * @desc 输入框只允许输入指定字符
  * @example
  * ```vue
- * <input v-myrestrict:modelValue.float maxlength=10 placeholder="只允许输入浮点类型数据"/>
- * <input v-myrestrict:字段名.regular="/^[0-9a-f]*$/i" placeholder="只允许输入符合正则表达式的数据"/>
+ * <input v-inputRestrict:modelValue.float maxlength=10 placeholder="只允许输入浮点类型数据"/>
+ * <input v-inputRestrict:字段名.regular="/^[0-9a-f]*$/i" placeholder="只允许输入符合正则表达式的数据"/>
  * ```
  */
-const myrestrict = {
+const inputRestrict = {
   beforeMount(elinput: HTMLInputElement, binding: any, vnode: any) {
-    console.log('binding :>> ', binding);
     if (Object.keys(binding.modifiers).length === 0) {
       return;
     }
-    // console.log(vnode.data.attrs,vnode)
     const el: any = elinput.querySelector('input') || elinput;
 
-    const regExpes: {[key: string]: any} = {
+    const regExpes: { [key: string]: any } = {
       integer: /^-?\d*$/,
       positive: /^\d*$/,
       float: /^-?\d*[.,]?\d*$/,
@@ -70,4 +68,4 @@ const myrestrict = {
   },
 };
 
-export default myrestrict;
+export default inputRestrict;
