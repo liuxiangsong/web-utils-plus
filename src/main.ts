@@ -4,7 +4,7 @@ import 'element-plus/lib/theme-chalk/index.css';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import BaseDirective from './directives';
+import BaseDirective from './plugins/global-directives';
 
 const app = createApp(App);
 app.use(ElementPlus);

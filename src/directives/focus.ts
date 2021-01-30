@@ -1,6 +1,7 @@
 const focus = {
   mounted(el: HTMLInputElement) {
-    el.focus();
+    const elInput: HTMLInputElement = el.querySelector('input') || el;
+    elInput.focus();
   },
 };
 
